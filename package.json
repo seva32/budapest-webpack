@@ -7,7 +7,8 @@
     "node": "14.2.0"
   },
   "scripts": {
-    "start": "npm install && npm run postinstall && node --trace-deprecation server/pre-server.js",
+    "start": "node --trace-deprecation server/pre-server.js",
+    "start:prod": "npm install && npm run postinstall && node --trace-deprecation server/pre-server.js",
     "start:dev": "node --trace-deprecation server/server.js",
     "start:dashboard": "webpack-dashboard node server/server.js",
     "postinstall": "npm run build && npm run build:server",
