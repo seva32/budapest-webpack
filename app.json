@@ -1,4 +1,0 @@
-{
-  "name": "React",
-  "buildpacks": [{ "url": "heroku/nodejs" }]
-}
