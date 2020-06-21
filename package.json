@@ -3,21 +3,24 @@
   "version": "0.0.0",
   "description": "React apps",
   "main": "src/index.js",
+  "engines": {
+    "node": "14.2.0"
+  },
   "scripts": {
     "start:babel": "node --trace-deprecation server/pre-server.js",
     "start": "node --trace-deprecation server/server.js",
     "start:dashboard": "webpack-dashboard node server/server.js",
-    "postinstall": "yarn run build && yarn run build:server",
+    "postinstall": "npm run build && npm run build:server",
     "build": "webpack --config webpack/webpack.prod.config.js",
     "build:server": "webpack --config webpack/webpack.server.config.js",
     "clean": "rm -rf build",
     "clean:modules": "rm -rf node_modules",
-    "call": "yarn run clean && yarn run clean:modules",
+    "call": "npm run clean && npm run clean:modules",
     "lint": "eslint src --ext .js*",
-    "dev": "yarn run clean && yarn run build:server && yarn start",
+    "dev": "npm run clean && npm run build:server && npm start",
     "test": "export NODE_ENV=test && jest --watch"
   },
-  "author": "#",
+  "author": "seva32",
   "private": true,
   "jest": {
     "setupFilesAfterEnv": [
